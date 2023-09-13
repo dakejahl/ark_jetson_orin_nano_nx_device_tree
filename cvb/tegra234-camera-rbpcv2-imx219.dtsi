@@ -33,7 +33,7 @@
 			vi_port1: port@1 {
 				reg = <1>;
 				rbpcv2_imx219_vi_in1: endpoint {
-					port-index = <2>;
+					port-index = <1>;
 					bus-width = <2>;
 					remote-endpoint = <&rbpcv2_imx219_csi_out1>;
 				};
@@ -46,12 +46,12 @@
 			num-channels = <2>;
 			#address-cells = <1>;
 			#size-cells = <0>;
-			csi_chan0: channel@0 {
+			channel@0 {
 				reg = <0>;
 				ports {
 					#address-cells = <1>;
 					#size-cells = <0>;
-					csi_chan0_port0: port@0 {
+					channel0_port0: port@0 {
 						reg = <0>;
 						rbpcv2_imx219_csi_in0: endpoint@0 {
 							port-index = <0>;
@@ -59,7 +59,7 @@
 							remote-endpoint = <&rbpcv2_imx219_out0>;
 						};
 					};
-					csi_chan0_port1: port@1 {
+					channel0_port1: port@1 {
 						reg = <1>;
 						rbpcv2_imx219_csi_out0: endpoint@1 {
 							remote-endpoint = <&rbpcv2_imx219_vi_in0>;
@@ -67,20 +67,20 @@
 					};
 				};
 			};
-			csi_chan1: channel@1 {
+			channel@1 {
 				reg = <1>;
 				ports {
 					#address-cells = <1>;
 					#size-cells = <0>;
-					csi_chan1_port0: port@0 {
+					channel1_port0: port@0 {
 						reg = <0>;
 						rbpcv2_imx219_csi_in1: endpoint@2 {
-							port-index = <2>;
+							port-index = <1>;
 							bus-width = <2>;
 							remote-endpoint = <&rbpcv2_imx219_out1>;
 						};
 					};
-					csi_chan1_port1: port@1 {
+					channel1_port1: port@1 {
 						reg = <1>;
 						rbpcv2_imx219_csi_out1: endpoint@3 {
 							remote-endpoint = <&rbpcv2_imx219_vi_in1>;
@@ -91,8 +91,9 @@
 		};
 	};
 
-	cam_i2cmux {
-		i2c_0:i2c@0 {
+	i2c@3180000 {
+		tca9546@70 {
+			i2c@0 {
 			imx219_cam0: rbpcv2_imx219_a@10 {
 				compatible = "sony,imx219";
 				/* I2C device address */
@@ -207,7 +208,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "6";
+					lane_polarity = "2";
 
 					active_w = "3280";
 					active_h = "2464";
@@ -248,7 +249,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "6";
+					lane_polarity = "2";
 
 					active_w = "3280";
 					active_h = "1848";
@@ -289,7 +290,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "6";
+					lane_polarity = "2";
 
 					active_w = "1920";
 					active_h = "1080";
@@ -331,7 +332,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "6";
+					lane_polarity = "2";
 
 					active_w = "1640";
 					active_h = "1232";
@@ -373,7 +374,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "6";
+					lane_polarity = "2";
 
 					active_w = "1280";
 					active_h = "720";
@@ -415,7 +416,7 @@
 					* discontinuous_clk = "yes";
 					* dpcm_enable = "false";
 					* cil_settletime = "0";
-					* lane_polarity = "6";
+					* lane_polarity = "2";
 
 					* active_w = "1280";
 					* active_h = "720";
@@ -456,6 +457,7 @@
 					port@0 {
 						reg = <0>;
 						rbpcv2_imx219_out0: endpoint {
+							status = "okay";
 							port-index = <0>;
 							bus-width = <2>;
 							remote-endpoint = <&rbpcv2_imx219_csi_in0>;
@@ -464,8 +466,8 @@
 				};
 			};
 		};
-		i2c_1: i2c@1 {
-			imx219_cam1: rbpcv2_imx219_c@10 {
+		i2c@1 {
+			imx219_cam1: rbpcv2_imx219_b@10 {
 				compatible = "sony,imx219";
 				/* I2C device address */
 				reg = <0x10>;
@@ -565,12 +567,12 @@
 				mode0 { /* IMX219_MODE_3280x2464_21FPS */
 					mclk_khz = "24000";
 					num_lanes = "2";
-					tegra_sinterface = "serial_c";
+					tegra_sinterface = "serial_b";
 					phy_mode = "DPHY";
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "0";
+					lane_polarity = "1";
 
 					active_w = "3280";
 					active_h = "2464";
@@ -606,12 +608,12 @@
 				mode1 { /* IMX219_MODE_3280x1848_28FPS */
 					mclk_khz = "24000";
 					num_lanes = "2";
-					tegra_sinterface = "serial_c";
+					tegra_sinterface = "serial_b";
 					phy_mode = "DPHY";
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "0";
+					lane_polarity = "1";
 
 					active_w = "3280";
 					active_h = "1848";
@@ -647,12 +649,12 @@
 				mode2 { /* IMX219_MODE_1920x1080_30FPS */
 					mclk_khz = "24000";
 					num_lanes = "2";
-					tegra_sinterface = "serial_c";
+					tegra_sinterface = "serial_b";
 					phy_mode = "DPHY";
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "0";
+					lane_polarity = "1";
 
 					active_w = "1920";
 					active_h = "1080";
@@ -688,12 +690,12 @@
 				mode3 { /* IMX219_MODE_1640x1232_30FPS */
 					mclk_khz = "24000";
 					num_lanes = "2";
-					tegra_sinterface = "serial_c";
+					tegra_sinterface = "serial_b";
 					phy_mode = "DPHY";
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "0";
+					lane_polarity = "1";
 
 					active_w = "1640";
 					active_h = "1232";
@@ -729,12 +731,12 @@
 				mode4 { /* IMX219_MODE_1280x720_60FPS */
 					mclk_khz = "24000";
 					num_lanes = "2";
-					tegra_sinterface = "serial_c";
+					tegra_sinterface = "serial_b";
 					phy_mode = "DPHY";
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "0";
+					lane_polarity = "1";
 
 					active_w = "1280";
 					active_h = "720";
@@ -771,12 +773,12 @@
 				*mode5 { // IMX219_MODE_1280x720_120FPS
 				*	mclk_khz = "24000";
 				*	num_lanes = "2";
-				*	tegra_sinterface = "serial_c";
+				*	tegra_sinterface = "serial_b";
 				*	phy_mode = "DPHY";
 				*	discontinuous_clk = "yes";
 				*	dpcm_enable = "false";
 				*	cil_settletime = "0";
-				*	lane_polarity = "0";
+				*	lane_polarity = "1";
 
 				*	active_w = "1280";
 				*	active_h = "720";
@@ -818,13 +820,14 @@
 						reg = <0>;
 						rbpcv2_imx219_out1: endpoint {
 							status = "okay";
-							port-index = <2>;
+							port-index = <1>;
 							bus-width = <2>;
 							remote-endpoint = <&rbpcv2_imx219_csi_in1>;
 						};
 					};
 				};
 			};
+		};
 		};
 	};
 
