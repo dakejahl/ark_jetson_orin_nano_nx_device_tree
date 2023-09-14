@@ -15,7 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// #include "tegra234-camera-rbpcv2-imx219.dtsi"
 #include "tegra234-camera-ark-imx219.dtsi"
 #include "dt-bindings/clock/tegra234-clock.h"
 
@@ -55,13 +54,6 @@
 				rbpcv2_imx219_a@10 {
 					/* Define any required hw resources needed by driver */
 					/* ie. clocks, io pins, power sources */
-					// #address-cells = <1>;
-					// #size-cells = <0>;
-					// status = "okay";
-					// clocks = <&bpmp_clks TEGRA234_CLK_EXTPERIPH1>,
-					//   <&bpmp_clks TEGRA234_CLK_PLLP_OUT0>;
-					// clock-names = "extperiph1", "pllp_grtba";
-					// mclk = "extperiph1";
 					reset-gpios = <&tegra_main_gpio CAM0_PWDN GPIO_ACTIVE_HIGH>;
 				};
 			};
@@ -73,13 +65,6 @@
 				rbpcv2_imx219_b@10 {
 					/* Define any required hw resources needed by driver */
 					/* ie. clocks, io pins, power sources */
-					// #address-cells = <1>;
-					// #size-cells = <0>;
-					// status = "okay";
-					// clocks = <&bpmp_clks TEGRA234_CLK_EXTPERIPH2>,
-					//   <&bpmp_clks TEGRA234_CLK_PLLP_OUT0>;
-					// clock-names = "extperiph2", "pllp_grtba";
-					// mclk = "extperiph2";
 					reset-gpios = <&tegra_main_gpio CAM1_PWDN GPIO_ACTIVE_HIGH>;
 				};
 			};
@@ -91,13 +76,6 @@
 				rbpcv2_imx219_c@10 {
 					/* Define any required hw resources needed by driver */
 					/* ie. clocks, io pins, power sources */
-					// #address-cells = <1>;
-					// #size-cells = <0>;
-					// status = "okay";
-					// clocks = <&bpmp_clks TEGRA234_CLK_EXTPERIPH3>,
-					//   <&bpmp_clks TEGRA234_CLK_PLLP_OUT0>;
-					// clock-names = "extperiph3", "pllp_grtba";
-					// mclk = "extperiph3";
 					reset-gpios = <&tegra_main_gpio CAM2_PWDN GPIO_ACTIVE_HIGH>;
 				};
 			};
@@ -109,13 +87,6 @@
 				rbpcv2_imx219_d@10 {
 					/* Define any required hw resources needed by driver */
 					/* ie. clocks, io pins, power sources */
-					// #address-cells = <1>;
-					// #size-cells = <0>;
-					// status = "okay";
-					// clocks = <&bpmp_clks TEGRA234_CLK_EXTPERIPH4>,
-					//   <&bpmp_clks TEGRA234_CLK_PLLP_OUT0>;
-					// clock-names = "extperiph4", "pllp_grtba";
-					// mclk = "extperiph4";
 					reset-gpios = <&tegra_aon_gpio CAM3_PWDN GPIO_ACTIVE_HIGH>;
 				};
 			};

@@ -17,8 +17,6 @@
 #include "tegra234-p3768-0000-a0-pcie.dtsi"
 #include "tegra234-p3768-0000-a0-fixed-regulator.dtsi"
 #include "tegra234-p3768-audio.dtsi"
-// #include "tegra234-p3768-camera-rbpcv3-imx477.dtsi"
-// #include "tegra234-p3768-camera-rbpcv2-imx219.dtsi"
 #include "tegra234-p3768-camera-ark-imx219.dtsi"
 
 / {
@@ -108,8 +106,6 @@
  					label = "micro-USB";
  					type = "micro";
 					id-gpio = <&tegra_main_gpio TEGRA234_MAIN_GPIO(Z, 1) GPIO_ACTIVE_LOW>;
- 					//vbus-gpio = <&tegra_main_gpio TEGRA234_MAIN_GPIO(Z, 1) GPIO_ACTIVE_HIGH>;
-					//cable-connected-on-boot = <USB_ROLE_DEVICE>;
  				};
 			};
 			usb2-1 {/* Goes to hub */
@@ -156,26 +152,6 @@
 		nvidia,xusb-padctl = <&xusb_padctl>;
 	};
 
-	// Why remove?
-	// i2c@c240000{
-	// 	status = "okay";
-	// 	fusb301@25 {
-	// 		compatible = "onsemi,fusb301";
-	// 		reg = <0x25>;
-	// 		status = "okay";
-	// 		#address-cells = <1>;
-	// 		#size-cells = <0>;
-	// 		interrupt-parent = <&tegra_main_gpio>;
-	// 		interrupts = <TEGRA234_MAIN_GPIO(Z, 1) IRQ_TYPE_LEVEL_LOW>;
-	// 		connector@0 {
-	// 			port@0 {
-	// 				fusb_p0: endpoint {
-	// 					remote-endpoint = <&typec_p0>;
-	// 				};
-	// 			};
-	// 		};
-	// 	};
-	// };
 	spi@3210000{ /* SPI1 in 40 pin conn */
 		status = "okay";
 		spi@0 { /* chip select 0 */
