@@ -278,108 +278,108 @@
 		status = "okay";
 	};
 
-	tegra-capture-vi  {
-		ports {
-			port@0 {
-				endpoint {
-					port-index = <0>;
-				};
-			};
-			port@1 {
-				endpoint {
-					port-index = <1>;
-				};
-			};
-		};
-	};
+	// tegra-capture-vi  {
+	// 	ports {
+	// 		port@0 {
+	// 			endpoint {
+	// 				port-index = <0>;
+	// 			};
+	// 		};
+	// 		port@1 {
+	// 			endpoint {
+	// 				port-index = <1>;
+	// 			};
+	// 		};
+	// 	};
+	// };
 
-	host1x@13e00000 {
-		nvcsi@15a00000 {
-			channel@0 {
-				ports {
-					port@0 {
-						endpoint@0 {
-							port-index = <0>;
-						};
-					};
-				};
-			};
-			channel@1 {
-				ports {
-					port@1 {
-						endpoint@0 {
-							port-index = <1>;
-						};
-					};
-				};
-			};
-		};
-	};
+	// host1x@13e00000 {
+	// 	nvcsi@15a00000 {
+	// 		channel@0 {
+	// 			ports {
+	// 				port@0 {
+	// 					endpoint@0 {
+	// 						port-index = <0>;
+	// 					};
+	// 				};
+	// 			};
+	// 		};
+	// 		channel@1 {
+	// 			ports {
+	// 				port@1 {
+	// 					endpoint@0 {
+	// 						port-index = <1>;
+	// 					};
+	// 				};
+	// 			};
+	// 		};
+	// 	};
+	// };
 
-	i2c@3180000 {
-		tca9546@70 {
-			i2c@0 {
-				rbpcv2_imx219_a@10 {
-					mode0 {
-						tegra_sinterface = "serial_a";
-						lane_polarity = "2";
-					};
-					mode1 {
-						tegra_sinterface = "serial_a";
-						lane_polarity = "2";
-					};
-					mode2 {
-						tegra_sinterface = "serial_a";
-						lane_polarity = "2";
-					};
-					mode3 {
-						tegra_sinterface = "serial_a";
-						lane_polarity = "2";
-					};
-					mode4 {
-						tegra_sinterface = "serial_a";
-						lane_polarity = "2";
-					};
-					ports {
-						port@0 {
-							endpoint {
-								port-index = <0>;
-							};
-						};
-					};
-				};
-			};
-			i2c@1 {
-				rbpcv2_imx219_b@10 {
-					mode0 {
-						tegra_sinterface = "serial_b";
-						lane_polarity = "1";
-					};
-					mode1 {
-						tegra_sinterface = "serial_b";
-						lane_polarity = "1";
-					};
-					mode2 {
-						tegra_sinterface = "serial_b";
-						lane_polarity = "1";
-					};
-					mode3 {
-						tegra_sinterface = "serial_b";
-						lane_polarity = "1";
-					};
-					mode4 {
-						tegra_sinterface = "serial_b";
-						lane_polarity = "1";
-					};
-					ports {
-						port@1 {
-							endpoint {
-								port-index = <1>;
-							};
-						};
-					};
-				};
-			};
-		};
-	};
+	// i2c@3180000 {
+	// 	tca9546@70 {
+	// 		i2c@0 {
+	// 			rbpcv2_imx219_a@10 {
+	// 				mode0 {
+	// 					tegra_sinterface = "serial_a";
+	// 					lane_polarity = "2";
+	// 				};
+	// 				mode1 {
+	// 					tegra_sinterface = "serial_a";
+	// 					lane_polarity = "2";
+	// 				};
+	// 				mode2 {
+	// 					tegra_sinterface = "serial_a";
+	// 					lane_polarity = "2";
+	// 				};
+	// 				mode3 {
+	// 					tegra_sinterface = "serial_a";
+	// 					lane_polarity = "2";
+	// 				};
+	// 				mode4 {
+	// 					tegra_sinterface = "serial_a";
+	// 					lane_polarity = "2";
+	// 				};
+	// 				ports {
+	// 					port@0 {
+	// 						endpoint {
+	// 							port-index = <0>;
+	// 						};
+	// 					};
+	// 				};
+	// 			};
+	// 		};
+	// 		i2c@1 {
+	// 			rbpcv2_imx219_b@10 {
+	// 				mode0 {
+	// 					tegra_sinterface = "serial_b";
+	// 					lane_polarity = "1";
+	// 				};
+	// 				mode1 {
+	// 					tegra_sinterface = "serial_b";
+	// 					lane_polarity = "1";
+	// 				};
+	// 				mode2 {
+	// 					tegra_sinterface = "serial_b";
+	// 					lane_polarity = "1";
+	// 				};
+	// 				mode3 {
+	// 					tegra_sinterface = "serial_b";
+	// 					lane_polarity = "1";
+	// 				};
+	// 				mode4 {
+	// 					tegra_sinterface = "serial_b";
+	// 					lane_polarity = "1";
+	// 				};
+	// 				ports {
+	// 					port@1 {
+	// 						endpoint {
+	// 							port-index = <1>;
+	// 						};
+	// 					};
+	// 				};
+	// 			};
+	// 		};
+	// 	};
+	// };
 };

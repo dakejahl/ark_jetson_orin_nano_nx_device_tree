@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "tegra234-camera-ark-imx219.dtsi"
+#include "tegra234-camera-rbpcv2-imx219.dtsi"
 #include "dt-bindings/clock/tegra234-clock.h"
 
 #define CAM0_PWDN   TEGRA234_MAIN_GPIO(H, 6)
@@ -25,15 +25,6 @@
 
 / {
 	i2c@3180000 {
-		gpio@2200000 {
-			camera-control-output-low {
-				gpio-hog;
-				output-low;
-				gpios = <CAM0_PWDN 0 CAM1_PWDN 0>;
-				label = "cam0-pwdn","cam1-pwdn";
-			};
-		};
-
 		tca9546@70 {
 			compatible = "nxp,pca9546";
 			reg = <0x70>;
@@ -79,6 +70,15 @@
 					reset-gpios = <&tegra_main_gpio CAM1_PWDN GPIO_ACTIVE_LOW>;
 				};
 			};
+		};
+	};
+
+	gpio@2200000 {
+		camera-control-output-low {
+			gpio-hog;
+			output-low;
+			gpios = <CAM0_PWDN 0 CAM1_PWDN 0>;
+			label = "cam0-pwdn","cam1-pwdn";
 		};
 	};
 };
