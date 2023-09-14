@@ -61,7 +61,7 @@
 					//   <&bpmp_clks TEGRA234_CLK_PLLP_OUT0>;
 					// clock-names = "extperiph1", "pllp_grtba";
 					// mclk = "extperiph1";
-					reset-gpios = <&tegra_main_gpio CAM0_PWDN GPIO_ACTIVE_LOW>;
+					reset-gpios = <&tegra_main_gpio CAM0_PWDN GPIO_ACTIVE_HIGH>;
 				};
 			};
 			i2c@1 {
@@ -79,7 +79,7 @@
 					//   <&bpmp_clks TEGRA234_CLK_PLLP_OUT0>;
 					// clock-names = "extperiph2", "pllp_grtba";
 					// mclk = "extperiph2";
-					reset-gpios = <&tegra_main_gpio CAM1_PWDN GPIO_ACTIVE_LOW>;
+					reset-gpios = <&tegra_main_gpio CAM1_PWDN GPIO_ACTIVE_HIGH>;
 				};
 			};
 			i2c@2 {
@@ -97,7 +97,7 @@
 					//   <&bpmp_clks TEGRA234_CLK_PLLP_OUT0>;
 					// clock-names = "extperiph3", "pllp_grtba";
 					// mclk = "extperiph3";
-					reset-gpios = <&tegra_main_gpio CAM2_PWDN GPIO_ACTIVE_LOW>;
+					reset-gpios = <&tegra_main_gpio CAM2_PWDN GPIO_ACTIVE_HIGH>;
 				};
 			};
 			i2c@3 {
@@ -115,7 +115,7 @@
 					//   <&bpmp_clks TEGRA234_CLK_PLLP_OUT0>;
 					// clock-names = "extperiph4", "pllp_grtba";
 					// mclk = "extperiph4";
-					reset-gpios = <&tegra_aon_gpio CAM3_PWDN GPIO_ACTIVE_LOW>;
+					reset-gpios = <&tegra_aon_gpio CAM3_PWDN GPIO_ACTIVE_HIGH>;
 				};
 			};
 		};
