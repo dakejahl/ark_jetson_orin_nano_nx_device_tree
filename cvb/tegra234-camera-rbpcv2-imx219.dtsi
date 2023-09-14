@@ -416,7 +416,7 @@
 					* discontinuous_clk = "yes";
 					* dpcm_enable = "false";
 					* cil_settletime = "0";
-					* lane_polarity = "2";
+					* lane_polarity = "4";
 
 					* active_w = "1280";
 					* active_h = "720";
@@ -572,7 +572,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "1";
+					lane_polarity = "4";
 
 					active_w = "3280";
 					active_h = "2464";
@@ -613,7 +613,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "1";
+					lane_polarity = "4";
 
 					active_w = "3280";
 					active_h = "1848";
@@ -654,7 +654,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "1";
+					lane_polarity = "4";
 
 					active_w = "1920";
 					active_h = "1080";
@@ -695,7 +695,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "1";
+					lane_polarity = "4";
 
 					active_w = "1640";
 					active_h = "1232";
@@ -736,7 +736,7 @@
 					discontinuous_clk = "yes";
 					dpcm_enable = "false";
 					cil_settletime = "0";
-					lane_polarity = "1";
+					lane_polarity = "4";
 
 					active_w = "1280";
 					active_h = "720";
@@ -778,7 +778,7 @@
 				*	discontinuous_clk = "yes";
 				*	dpcm_enable = "false";
 				*	cil_settletime = "0";
-				*	lane_polarity = "1";
+				*	lane_polarity = "4";
 
 				*	active_w = "1280";
 				*	active_h = "720";
@@ -893,8 +893,8 @@
 				orientation = "1";
 				cam_module0_drivernode0: drivernode0 {
 					pcl_id = "v4l2_sensor";
-					devname = "imx219 9-0010";
-					proc-device-tree = "/proc/device-tree/cam_i2cmux/i2c@0/rbpcv2_imx219_a@10";
+					devname = "imx219 30-0010";
+					proc-device-tree = "/proc/device-tree/i2c@3180000/tca9546@70/i2c@0/rbpcv2_imx219_a@10";
 				};
 				cam_module0_drivernode1: drivernode1 {
 					pcl_id = "v4l2_lens";
@@ -907,8 +907,8 @@
 				orientation = "1";
 				cam_module1_drivernode0: drivernode0 {
 					pcl_id = "v4l2_sensor";
-					devname = "imx219 10-0010";
-					proc-device-tree = "/proc/device-tree/cam_i2cmux/i2c@1/rbpcv2_imx219_c@10";
+					devname = "imx219 31-0010";
+					proc-device-tree = "/proc/device-tree/i2c@3180000/tca9546@70/i2c@1/rbpcv2_imx219_b@10";
 				};
 				cam_module1_drivernode1: drivernode1 {
 					pcl_id = "v4l2_lens";
